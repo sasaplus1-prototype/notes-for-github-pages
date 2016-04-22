@@ -30,3 +30,52 @@ Template engine
 Articles
 
 - [Articles for GitHub Pages](https://github.com/blog/search?utf8=%E2%9C%93&q=github+pages)
+
+## ページを公開する
+
+ページを公開するまでの手順について。
+
+1. GitHubでリポジトリを作成する
+2. リポジトリにファイルをコミットする
+3. GitHubのリポジトリに変更を送信する
+
+[User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
+
+### GitHubでリポジトリを作成する
+
+作成するリポジトリの名前によって、ファイルを配置するブランチの名前を変える必要がある。
+
+`username.github.io`または`orgname.github.io`の場合は`master`ブランチがページのファイルを配置するブランチとなる。
+（以前は`username.github.io`でなく`username.github.com`だった）
+
+それ以外の場合は`gh-pages`ブランチがページのファイルを配置するブランチとなる。
+（以前は`gh_pages`も許容されていたような記憶があるが、現在は不明）
+
+[New GitHub Pages domain: github.io](https://github.com/blog/1452-new-github-pages-domain-github-io)
+
+### リポジトリにファイルをコミットする
+
+
+
+### GitHubのリポジトリに変更を送信する
+
+`git push`でGitHubのリポジトリに変更を送信すると公開される。
+
+`http://username.github.io/`
+
+`http://username.github.io/projectname/`
+
+## ローカルマシンにGitHub Pagesの環境を作りたい
+
+[github-pages](https://rubygems.org/gems/github-pages)というgemが公開されているので、
+これをインストールすることでGitHub Pagesとほぼ同等の環境を作る事ができる。
+
+[Cutting the GitHub Pages Gem](https://github.com/blog/1581-cutting-the-github-pages-gem)
+
+## コメント欄を付けたい
+
+GitHub Pagesは静的なサイトを公開するためのものなので、
+コメント欄の機能はGitHub Pagesでは実現できない。
+
+いくつかのGitHub Pagesで作成されたブログなどを見ると
+[DISQUS](https://disqus.com/)を使用してコメント欄としているユーザが多いように見える。
