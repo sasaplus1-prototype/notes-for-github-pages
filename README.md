@@ -55,7 +55,7 @@ Articles
 
 Gitを駆使してリポジトリにファイルをコミットする。
 
-あるいはGitHubをブラウザで開いて[`New file`からファイルを追加](https://help.github.com/articles/creating-new-files/)、[`Edit`からファイルを編集する](https://help.github.com/articles/editing-files-in-your-repository/)などをしてブラウザからコミットを行っても良い。
+あるいはGitHubをブラウザで開いて[`New file`からファイルを追加](https://help.github.com/articles/creating-new-files/)したり、[`Edit`からファイルを編集する](https://help.github.com/articles/editing-files-in-your-repository/)などをしてブラウザからコミットを行っても良い。
 
 ### GitHubのリポジトリに変更を送信する
 
@@ -67,14 +67,58 @@ $ git push origin (master または gh-pages)
 
 でGitHubのリポジトリに変更を送信すると公開される。ブラウザからファイルをコミットした場合は必要ない。
 
+## コメント欄を付けたい
+
+GitHub Pagesは静的なサイトを公開するためのものなので、コメント欄の機能はGitHub Pagesでは実現できない。
+
+いくつかのGitHub Pagesで作成されたブログなどを見ると[DISQUS](https://disqus.com/)を使用してコメント欄としているユーザが多いように見える。
+
+## サイトマップのXMLを自動生成させたい
+
+`jekyll-sitemap`を使用する設定を指定することで自動生成されるようになる。`_config.yml`に以下を記述する。
+
+```yaml
+gems:
+  - jekyll-sitemap
+```
+
+[Sitemaps for GitHub Pages](https://help.github.com/articles/sitemaps-for-github-pages/)
+
+[jekyll/jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+
+## 独自ドメインを使いたい
+
+リポジトリに`CNAME`というファイル名で使用したい独自ドメインを記述しておくと、そのリポジトリのGitHub Pagesへ記述された独自ドメインでアクセスすることができるようになる。
+
+独自ドメインはAレコードに`192.30.252.153`と`192.30.252.154`を指定しておく。
+
+[Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)
+
 ## ローカルマシンにGitHub Pagesの環境を作りたい
 
 [github-pages](https://rubygems.org/gems/github-pages)というgemが公開されているので、これをインストールすることでGitHub Pagesとほぼ同等の環境を作る事ができる。
 
 [Cutting the GitHub Pages Gem](https://github.com/blog/1581-cutting-the-github-pages-gem)
 
-## コメント欄を付けたい
+## リポジトリのメタデータを使いたい
 
-GitHub Pagesは静的なサイトを公開するためのものなので、コメント欄の機能はGitHub Pagesでは実現できない。
+`{{ site.github }}`以下にリポジトリのメタデータがあらかじめ格納されている。
 
-いくつかのGitHub Pagesで作成されたブログなどを見ると[DISQUS](https://disqus.com/)を使用してコメント欄としているユーザが多いように見える。
+[Repository metadata and plugin support for GitHub Pages](https://github.com/blog/1797-repository-metadata-and-plugin-support-for-github-pages)
+
+[Repository metadata on GitHub Pages](https://help.github.com/articles/repository-metadata-on-github-pages/)
+
+### リポジトリのメタデータをローカルマシンのGitHub Pagesの環境で使いたい
+
+`jekyll-github-metadata`を使用する設定を指定することで使用可能になる。`_config.yml`に以下を記述する。
+
+`_config.yml`に以下を記述する。
+
+```yaml
+gems:
+  - jekyll-github-metadata
+```
+
+[Preview GitHub Pages metadata locally](https://github.com/blog/2154-preview-github-pages-metadata-locally)
+
+[jekyll/github-metadata](https://github.com/jekyll/github-metadata)
