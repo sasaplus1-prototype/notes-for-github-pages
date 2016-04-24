@@ -43,25 +43,29 @@ Articles
 
 ### GitHubでリポジトリを作成する
 
-作成するリポジトリの名前によって、ファイルを配置するブランチの名前を変える必要がある。
+`http://username.github.io/`にページを作るか、`http://username.github.io/projectname/`にページを作るかによって作成するリポジトリの名前とファイルを配置するブランチの名前を変える必要がある。
 
-`username.github.io`または`orgname.github.io`の場合は`master`ブランチがページのファイルを配置するブランチとなる。（以前は`username.github.io`でなく`username.github.com`だった）
+`http://username.github.io/`にページを作る場合は`username.github.io`という名前でリポジトリを作成し、`master`ブランチにファイルを配置する必要がある。（以前は`username.github.io`ではなく`username.github.com`だった）
 
-それ以外の場合は`gh-pages`ブランチがページのファイルを配置するブランチとなる。（以前は`gh_pages`も許容されていたような記憶があるが、現在は不明）
+`http://username.github.io/projectname/`にページを作る場合はリポジトリの名前は任意に、`gh-pages`ブランチにファイルを配置する必要がある。（以前は`gh_pages`も許容されていたような記憶があるが、現在は不明）
 
 [New GitHub Pages domain: github.io](https://github.com/blog/1452-new-github-pages-domain-github-io)
 
 ### リポジトリにファイルをコミットする
 
+Gitを駆使してリポジトリにファイルをコミットする。
 
+あるいはGitHubをブラウザで開いて[`New file`からファイルを追加](https://help.github.com/articles/creating-new-files/)、[`Edit`からファイルを編集する](https://help.github.com/articles/editing-files-in-your-repository/)などをしてブラウザからコミットを行っても良い。
 
 ### GitHubのリポジトリに変更を送信する
 
-`git push`でGitHubのリポジトリに変更を送信すると公開される。
+変更を
 
-`http://username.github.io/`
+```sh
+$ git push origin (master または gh-pages)
+```
 
-`http://username.github.io/projectname/`
+でGitHubのリポジトリに変更を送信すると公開される。ブラウザからファイルをコミットした場合は必要ない。
 
 ## ローカルマシンにGitHub Pagesの環境を作りたい
 
