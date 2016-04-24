@@ -47,7 +47,7 @@ Articles
 
 `http://username.github.io/`にページを作る場合は`username.github.io`という名前でリポジトリを作成し、`master`ブランチにファイルを配置する必要がある。（以前は`username.github.io`ではなく`username.github.com`だった）
 
-`http://username.github.io/projectname/`にページを作る場合はリポジトリの名前は任意に、`gh-pages`ブランチにファイルを配置する必要がある。（以前は`gh_pages`も許容されていたような記憶があるが、現在は不明）
+`http://username.github.io/projectname/`にページを作る場合は`projectname`という名前でリポジトリを作成し、`gh-pages`ブランチにファイルを配置する必要がある。（以前は`gh_pages`も許容されていたような記憶があるが、現在は不明）
 
 [New GitHub Pages domain: github.io](https://github.com/blog/1452-new-github-pages-domain-github-io)
 
