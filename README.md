@@ -88,11 +88,42 @@ gems:
 
 ## 独自ドメインを使いたい
 
-リポジトリに`CNAME`というファイル名で使用したい独自ドメインを記述しておくと、そのリポジトリのGitHub Pagesへ記述された独自ドメインでアクセスすることができるようになる。
+リポジトリの一番上のディレクトリに`CNAME`という名前のファイルで使用したい独自ドメインを記述しておくと、そのリポジトリのGitHub Pagesへ記述された独自ドメインでアクセスすることができるようになる。
 
 独自ドメインはAレコードに`192.30.252.153`と`192.30.252.154`を指定しておく。
 
 [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)
+
+## SassとCoffeeScriptを使いたい
+
+Sassはファイルの拡張子として`.scss`または`.sass`を付け、ファイルの先頭に`---`を2行続けて記述すると、Sassとしてコンパイルされる。
+
+```scss
+---
+---
+body {
+  color: black;
+}
+```
+
+コンパイルされたファイルは拡張子が`.css`に変更されたものになり、ファイルの配置場所は同じディレクトリとなる。
+
+CoffeeScriptは`_.config.yml`に以下を記述する。
+
+```yaml
+gems:
+  - jekyll-coffeescript
+```
+
+その上でSassと同様にファイルの拡張子として`.coffee`を付け、ファイルの先頭に`---`を2行続けて記述すると、CoffeeScriptとしてコンパイルされる。
+
+```coffee
+do -> console.log 'Hello!'
+```
+
+コンパイルされたファイルは拡張子が`.js`に変更されたものになり、ファイルの配置場所は同じディレクトリとなる。
+
+[Assets](http://jekyllrb.com/docs/assets/)
 
 ## ローカルマシンにGitHub Pagesの環境を作りたい
 
@@ -122,3 +153,7 @@ gems:
 [Preview GitHub Pages metadata locally](https://github.com/blog/2154-preview-github-pages-metadata-locally)
 
 [jekyll/github-metadata](https://github.com/jekyll/github-metadata)
+
+## Jekyllを無効化したい
+
+リポジトリの一番上のディレクトリに`.nojekyll`という名前のファイルを配置しておくと、Jekyllが無効化される。
