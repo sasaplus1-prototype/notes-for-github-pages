@@ -141,6 +141,22 @@ do -> console.log 'Hello!'
 
 [Repository metadata on GitHub Pages](https://help.github.com/articles/repository-metadata-on-github-pages/)
 
+### リポジトリのメタデータをJavaScriptから使いたい
+
+Jekyllの`jsonify`フィルタを使う事でJSON形式の文字列に変換できるので、これを`script`タグに直接埋め込むことで使用できる。
+
+```html
+<script type="application/json">{{ site.data | jsonify }}</script>
+```
+
+```html
+<script>
+window.site = {
+  data: JSON.parse({{ site.data | jsonify }})
+};
+</script>
+```
+
 ### リポジトリのメタデータをローカルマシンのGitHub Pagesの環境で使いたい
 
 `jekyll-github-metadata`を使用する設定を指定することで使用可能になる。`_config.yml`に以下を記述する。
