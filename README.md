@@ -118,6 +118,8 @@ gems:
 その上でSassと同様にファイルの拡張子として`.coffee`を付け、ファイルの先頭に`---`を2行続けて記述すると、CoffeeScriptとしてコンパイルされる。
 
 ```coffee
+---
+---
 do -> console.log 'Hello!'
 ```
 
