@@ -67,6 +67,12 @@ $ git push origin (master または gh-pages)
 
 でGitHubのリポジトリに変更を送信すると公開される。ブラウザからファイルをコミットした場合は必要ない。
 
+## 404ページを自作のページにしたい
+
+`404.html`もしくは`404.md`をリポジトリのルートに配置する。
+
+[Creating a custom 404 page for your GitHub Pages site](https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/)
+
 ## コメント欄を付けたい
 
 GitHub Pagesは静的なサイトを公開するためのものなので、コメント欄の機能はGitHub Pagesでは実現できない。
