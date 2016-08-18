@@ -47,9 +47,15 @@ Articles
 
 `http://username.github.io/`にページを作る場合は`username.github.io`という名前でリポジトリを作成し、`master`ブランチにファイルを配置する必要がある。（以前は`username.github.io`ではなく`username.github.com`だった）
 
+[New GitHub Pages domain: github.io](https://github.com/blog/1452-new-github-pages-domain-github-io)
+
+これ以外にページを作る場合は`gh-pages`ブランチにファイルを配置する必要があったが、GitHubのアップデートにより必要がなくなった。また、`master`ブランチの`/docs`ディレクトリ以下に配置することも可能になった。
+
+[Simpler GitHub Pages publishing](https://github.com/blog/2228-simpler-github-pages-publishing)
+
 `http://username.github.io/projectname/`にページを作る場合は`projectname`という名前でリポジトリを作成し、`gh-pages`ブランチにファイルを配置する必要がある。（以前は`gh_pages`も許容されていたような記憶があるが、現在は不明）
 
-[New GitHub Pages domain: github.io](https://github.com/blog/1452-new-github-pages-domain-github-io)
+[Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)
 
 ### リポジトリにファイルをコミットする
 
